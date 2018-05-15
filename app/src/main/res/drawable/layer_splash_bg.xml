@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/color_241e20" />
+
+    <!-- 顶层Logo居中 -->
+    <item
+        android:width="1dp"
+        android:height="1dp"
+        android:bottom="140dp"
+        android:gravity="center_horizontal|center_vertical">
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/hueiyi_logo" />
+    </item>
+
+    <item
+        android:width="600dp"
+        android:height="600dp"
+        android:bottom="140dp"
+        android:gravity="center">
+        <shape android:shape="oval">
+            <stroke
+                android:width="150dp"
+                android:color="@color/color_241e20" />
+        </shape>
+    </item>
+</layer-list>

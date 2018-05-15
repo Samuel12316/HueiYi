@@ -5,8 +5,8 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
     useLibrary 'org.apache.http.legacy'
 
     compileOptions {
@@ -20,13 +20,18 @@ android {
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
     }
     buildTypes {
-
         debug {
             buildConfigField "boolean", "LOG_DEBUG", "true"
             buildConfigField "boolean", "USE_CANARY", "true"
+            buildConfigField "boolean", "IS_BUILD_MODULE", "${isBuildModule}"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -34,8 +39,9 @@ android {
         release {
             buildConfigField "boolean", "LOG_DEBUG", "false"
             buildConfigField "boolean", "USE_CANARY", "false"
-            minifyEnabled true
-            shrinkResources true
+            buildConfigField "boolean", "IS_BUILD_MODULE", "${isBuildModule}"
+            minifyEnabled false
+            shrinkResources false
             zipAlignEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -56,25 +62,19 @@ buildscript {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    //support
-    implementation(rootProject.ext.dependencies["cardview-v7"]) {
-        exclude module: 'support-annotations'
-    }
-    implementation (rootProject.ext.dependencies["design"]) {
-        exclude module: 'support-annotations'
+    if (!isBuildModule.toBoolean()) {
+
+    } else {
+        implementation project(":CommonRes")//因为 CommonRes 依赖了 CommonSDK, 所以如果业务模块需要公共 UI 组件就依赖 CommonRes, 如果不需要就只依赖 CommonSDK
+        implementation project(":CommonService")
     }
     //tools
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
     annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
-    implementation rootProject.ext.dependencies["progressmanager"]
-    implementation rootProject.ext.dependencies["retrofit-url-manager"]
-    implementation rootProject.ext.dependencies["lifecyclemodel"]
     //view
     annotationProcessor(rootProject.ext.dependencies["butterknife-compiler"]) {
         exclude module: 'support-annotations'
     }
-    implementation rootProject.ext.dependencies["paginate"]
-    //arms
-    implementation project(':arms')
     //test
     testImplementation rootProject.ext.dependencies["junit"]
     debugImplementation rootProject.ext.dependencies["canary-debug"]
@@ -82,7 +82,8 @@ dependencies {
     testImplementation rootProject.ext.dependencies["canary-release"]
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+    implementation 'com.google.firebase:firebase-core:15.0.2'
 }
-repositories {
-    mavenCentral()
-}
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "107299582204",
+    "firebase_url": "https://story-bf56a.firebaseio.com",
+    "project_id": "story-bf56a",
+    "storage_bucket": "story-bf56a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107299582204:android:0cc17f5e0adbcf19",
+        "android_client_info": {
+          "package_name": "com.sensitivity.hueiyi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107299582204-21ki4pl4js07l98nnpe9tmq5d27u7dlp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNJojp8Jep2Q15gwsk_I7i9VCyet8_O4g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
