@@ -18,7 +18,6 @@ package com.sensitivity.hueiyi.mvp.ui.activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.view.View;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
@@ -28,8 +27,7 @@ import com.jess.arms.utils.ArmsUtils;
 import com.sensitivity.hueiyi.R;
 
 import butterknife.OnClick;
-import me.jessyan.armscomponent.commonsdk.core.RouterHub;
-import me.jessyan.armscomponent.commonsdk.utils.Utils;
+import com.sensitivity.commonsdk.core.RouterHub;
 
 /**
  * ================================================
@@ -133,18 +131,18 @@ public class MainActivity extends BaseActivity {
      * <p>
      * 在注解上使用 R2, 下面使用 R, 并且使用 {@code switch}, 替代 {@code if else}
      */
-    @OnClick({R.id.bt_zhihu, R.id.bt_gank, R.id.bt_gold})
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.bt_zhihu:
-                Utils.navigation(MainActivity.this, RouterHub.ZHIHU_HOMEACTIVITY);
-                break;
-            case R.id.bt_gank:
-                Utils.navigation(MainActivity.this, RouterHub.GANK_HOMEACTIVITY);
-                break;
-            case R.id.bt_gold:
-                Utils.navigation(MainActivity.this, RouterHub.GOLD_HOMEACTIVITY);
-                break;
-        }
-    }
+//    @OnClick({R.id.bt_zhihu, R.id.bt_gank, R.id.bt_gold})
+//    public void onClick(View view) {
+//        switch (view.getId()) {
+//            case R.id.bt_zhihu:
+//                Utils.navigation(MainActivity.this, RouterHub.ZHIHU_HOMEACTIVITY);
+//                break;
+//            case R.id.bt_gank:
+//                Utils.navigation(MainActivity.this, RouterHub.GANK_HOMEACTIVITY);
+//                break;
+//            case R.id.bt_gold:
+//                Utils.navigation(MainActivity.this, RouterHub.GOLD_HOMEACTIVITY);
+//                break;
+//        }
+//    }
 }

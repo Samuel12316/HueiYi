@@ -28,8 +28,8 @@ import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
-import me.jessyan.armscomponent.commonsdk.core.RouterHub;
-import me.jessyan.armscomponent.commonsdk.utils.Utils;
+import com.sensitivity.commonsdk.core.RouterHub;
+import com.sensitivity.commonsdk.utils.Utils;
 
 /**
  * ================================================

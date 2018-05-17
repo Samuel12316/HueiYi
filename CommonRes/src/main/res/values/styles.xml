@@ -3,9 +3,10 @@
     <!-- Base application theme. -->
     <style name="public_AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/public_colorPrimary</item>
-        <item name="colorPrimaryDark">@color/public_colorPrimaryDark</item>
-        <item name="colorAccent">@color/public_colorAccent</item>
+        <!--<item name="colorPrimary">@color/public_colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/public_colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/public_black</item>-->
+        <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowAnimationStyle">@style/public_Activity_Animation</item>
     </style>
 
@@ -34,5 +35,9 @@
         <item name="android:windowContentOverlay">@null</item>
         <!--是否模糊-->
         <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    
+    <style name="public_button_wrapper_style">
+        <item name="android:background">@drawable/qmui_divider_bottom_bitmap</item>
     </style>
 </resources>

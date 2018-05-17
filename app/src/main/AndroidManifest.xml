@@ -39,7 +39,7 @@
             android:value="1920" />
 
         <meta-data
-            android:name="me.jessyan.armscomponent.commonsdk.core.GlobalConfiguration"
+            android:name="com.sensitivity.commonsdk.core.GlobalConfiguration"
             android:value="ConfigModule" />
         <meta-data
             android:name="com.sensitivity.hueiyi.app.GlobalConfiguration"

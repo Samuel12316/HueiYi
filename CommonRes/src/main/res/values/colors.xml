@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="public_colorPrimary">#37889F</color>
-    <color name="public_colorPrimaryDark">#37889F</color>
-    <color name="public_colorAccent">#FF4081</color>
+    <color name="public_colorPrimary">#10A486</color>
+    <color name="public_colorPrimaryDark">#10A486</color>
+    <color name="public_colorAccent">#FFFFFF</color>
     <color name="public_white">#FFFFFF</color>
     <color name="public_black">#000000</color>
     <color name="public_color_transparent">#00000000</color>
@@ -26,6 +26,7 @@
     <color name="public_color_F55122">#F55122</color>
     <color name="public_color_F55123">#F55123</color>
     <color name="public_color_FFF55122">#FFF55122</color>
+    <color name="public_color_E3411F">#E3411F</color>
     <color name="public_color_FF6C6C6C">#FF6C6C6C</color>
     <color name="public_color_FF959292">#FF959292</color>
     <color name="public_color_FF9C15">#FF9C15</color>
@@ -42,4 +43,8 @@
     <color name="public_color_979797">#979797</color>
     <color name="public_color_FED652">#FED652</color>
     <color name="public_color_148CF9">#148CF9</color>
+    <color name="public_color_4E71A8">#4E71A8</color>
+    <color name="public_color_10A486">#10A486</color>
+    <color name="public_color_BFB500">#BFB500</color>
+    <color name="public_color_0D3B40">#0D3B40</color>
 </resources>

@@ -16,10 +16,10 @@ android {
 
     defaultConfig {
         applicationId "com.sensitivity.hueiyi"
-        minSdkVersion 19
-        targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
         testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
         javaCompileOptions {
             annotationProcessorOptions {
@@ -63,7 +63,7 @@ buildscript {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     if (!isBuildModule.toBoolean()) {
-
+        implementation project(":ModuleAccount")
     } else {
         implementation project(":CommonRes")//因为 CommonRes 依赖了 CommonSDK, 所以如果业务模块需要公共 UI 组件就依赖 CommonRes, 如果不需要就只依赖 CommonSDK
         implementation project(":CommonService")
@@ -75,6 +75,9 @@ dependencies {
     annotationProcessor(rootProject.ext.dependencies["butterknife-compiler"]) {
         exclude module: 'support-annotations'
     }
+    annotationProcessor(rootProject.ext.dependencies["design"]) {
+        exclude module: 'support-annotations'
+    }
     //test
     testImplementation rootProject.ext.dependencies["junit"]
     debugImplementation rootProject.ext.dependencies["canary-debug"]
@@ -82,8 +85,6 @@ dependencies {
     testImplementation rootProject.ext.dependencies["canary-release"]
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-
-    implementation 'com.google.firebase:firebase-core:15.0.2'
 }
 
 apply plugin: 'com.google.gms.google-services'

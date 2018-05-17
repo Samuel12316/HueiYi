@@ -184,8 +184,9 @@
     <dimen name="public_mar_left_84px">84px</dimen>
     <dimen name="public_mar_left_90px">90px</dimen>
     <dimen name="public_mar_left_150px">150px</dimen>
+    <dimen name="public_mar_left_200px">200px</dimen>
 
-    //marginright
+    //marginRight
     <dimen name="public_mar_right_15px">15px</dimen>
     <dimen name="public_mar_right_20px">20px</dimen>
     <dimen name="public_mar_right_26px">26px</dimen>
@@ -198,7 +199,8 @@
     <dimen name="public_mar_right_84px">84px</dimen>
     <dimen name="public_mar_right_90px">90px</dimen>
     <dimen name="public_mar_right_114px">114px</dimen>
-
+    <dimen name="public_mar_right_150px">150px</dimen>
+    <dimen name="public_mar_right_200px">200px</dimen>
 
     //marginBottom
     <dimen name="public_mar_bottom_8px">8px</dimen>
