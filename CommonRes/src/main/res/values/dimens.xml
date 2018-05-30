@@ -17,6 +17,7 @@
     <dimen name="public_font_48sp">48sp</dimen>
 
     //高
+    <dimen name="public_height_2px">2px</dimen>
     <dimen name="public_height_8px">8px</dimen>
     <dimen name="public_height_16px">16px</dimen>
     <dimen name="public_height_26px">26px</dimen>
@@ -159,6 +160,7 @@
     <dimen name="public_mar_top_44px">44px</dimen>
     <dimen name="public_mar_top_50px">50px</dimen>
     <dimen name="public_mar_top_60px">60px</dimen>
+    <dimen name="public_mar_top_70px">70px</dimen>
     <dimen name="public_mar_top_98px">98px</dimen>
     <dimen name="public_mar_top_100px">100px</dimen>
     <dimen name="public_mar_top_108px">108px</dimen>

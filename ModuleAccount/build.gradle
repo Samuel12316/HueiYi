@@ -79,9 +79,6 @@ dependencies {
         annotationProcessor(rootProject.ext.dependencies["butterknife-compiler"]) {
             exclude module: 'support-annotations'
         }
-        annotationProcessor(rootProject.ext.dependencies["design"]) {
-            exclude module: 'support-annotations'
-        }
         //tools
         annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
         annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
@@ -92,7 +89,6 @@ dependencies {
         testImplementation rootProject.ext.dependencies["junit"]
     } else {
         compileOnly rootProject.ext.dependencies["butterknife-compiler"]
-        compileOnly rootProject.ext.dependencies["design"]
         compileOnly rootProject.ext.dependencies["dagger2-compiler"]
         compileOnly rootProject.ext.dependencies["arouter-compiler"]
         compileOnly rootProject.ext.dependencies["canary-debug"]

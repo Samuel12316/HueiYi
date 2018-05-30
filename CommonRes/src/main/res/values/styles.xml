@@ -3,11 +3,21 @@
     <!-- Base application theme. -->
     <style name="public_AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <!--<item name="colorPrimary">@color/public_colorPrimary</item>-->
-        <!--<item name="colorPrimaryDark">@color/public_colorPrimaryDark</item>-->
-        <!--<item name="colorAccent">@color/public_black</item>-->
-        <item name="android:windowTranslucentStatus">true</item>
+        <item name="colorPrimary">@color/public_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/public_colorPrimaryDark</item>
+        <item name="colorAccent">@color/public_black</item>
+        <item name="android:windowTranslucentStatus">true</item>f
         <item name="android:windowAnimationStyle">@style/public_Activity_Animation</item>
+
+        <item name="android:windowBackground">@color/public_color_10A486</item>
+
+        <item name="colorControlNormal">@color/public_color_CCCCCC</item>
+        <item name="colorControlActivated">@color/public_white</item>
+        <item name="colorControlHighlight">@color/public_white</item>
+        <item name="android:textColorHint">@color/public_color_CCCCCC</item>
+
+        <item name="colorButtonNormal">@color/public_color_0D3B40</item>
+        <item name="android:colorButtonNormal">@color/public_color_0D3B40</item>
     </style>
 
     <style name="public_Activity_Animation">
@@ -37,7 +47,6 @@
         <item name="android:backgroundDimEnabled">true</item>
     </style>
     
-    <style name="public_button_wrapper_style">
-        <item name="android:background">@drawable/qmui_divider_bottom_bitmap</item>
+    <style name="public_button_wrapper" parent="@style/Theme.AppCompat.Light.NoActionBar">
     </style>
 </resources>

@@ -54,6 +54,7 @@ ext {
             "vlayout"                  : "com.alibaba.android:vlayout:1.1.0@aar",
             "lottie"                   : "com.airbnb.android:lottie:2.5.4",
             "qmui"                     : "com.qmuiteam:qmui:1.1.2",
+            "materialdesign"           : "com.google.android.material:material:1.0.0-alpha1",
 
             //rx1
             "rxandroid"                : "io.reactivex:rxandroid:1.2.1",
